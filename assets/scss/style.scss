@@ -6,6 +6,9 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
 
+$light-primary-color: lighten(#9356DC, 5%);
+$light-secondary-color: lighten(#FF79DA, 5%);
+
 $main-bg-color: rgba(246, 246, 246, 1);
 $second-bg-color: rgba(255, 255, 255, 1);
 

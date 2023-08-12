@@ -59,11 +59,16 @@
     display: none;
 }
 
+i.fa-regular.fa-heart:hover {
+    cursor: pointer;
+}
 
 i.fa-solid.fa-heart {
     visibility: hidden;
     font-size: 0;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
 }
 
 input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
@@ -73,6 +78,7 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
     visibility: inherit;
     font-size: 23px;
 
+  
 
 
 }

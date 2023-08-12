@@ -4,16 +4,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&family=Shrikhand&display=swap");
 /********** Linked SCSS files **********/
 .main-button {
-  width: -moz-fit-content;
-  width: fit-content;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
   color: rgb(255, 255, 255);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   text-decoration: none;
   padding: 15px;
   font-weight: 500;
+  transition: all 400ms ease-in-out;
 }
+.main-button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+  transform: scale(1.005);
+}
+
 .cards {
   position: relative;
   display: flex;
@@ -67,10 +73,15 @@
   display: none;
 }
 
+i.fa-regular.fa-heart:hover {
+  cursor: pointer;
+}
+
 i.fa-solid.fa-heart {
   visibility: hidden;
   font-size: 0;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
