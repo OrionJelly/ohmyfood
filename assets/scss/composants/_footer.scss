@@ -1,0 +1,32 @@
+.footer {
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(53, 53, 53, 1);
+    color: $second-bg-color;
+
+        &__title {
+            font-family: 'shrikhand';
+            padding-bottom : 22px;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            list-style: none;
+            font-weight: 500;
+            padding: 0;
+
+
+            &--link a{
+                text-decoration: none;
+                color: $second-bg-color;
+            }
+
+            &--link i {
+                width: 20px;
+                padding-right: 5px;
+            }
+        }
+}
