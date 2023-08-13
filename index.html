@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div class="body__container">
     <header>
         <nav>
             <div class="nav__logo">
@@ -31,26 +32,29 @@
     </header>
     <main>
         <section class="section-function">
-            <h2>Fonctionnement </h2>
-            <div class="section-function__tips">
-                <div class="section-function__tips--dot">1</div>
+            <h2>Fonctionnement</h2>
+            <div class="section-function__container">
+            <div class="section-function__container--tips">
+                <div class="section-function__container--tips--dot">1</div>
                 <i class="fa-solid fa-mobile-screen-button"></i>
-                <p class="">Choisissez un restaurant </p>
+                <p class="">Choisissez un restaurant</p>
             </div>
-            <div class="section-function__tips">
-                <div class="section-function__tips--dot">2</div>
+            <div class="section-function__container--tips">
+                <div class="section-function__container--tips--dot">2</div>
                 <i class="fa-solid fa-list-ul"></i>
-                <p>Choisissez un restaurant</p>
+                <p>Composez vos menu</p>
             </div>
-            <div class="section-function__tips">
-                <div class="section-function__tips--dot">3</div>
+            <div class="section-function__container--tips">
+                <div class="section-function__container--tips--dot">3</div>
                 <i class="fa-solid fa-store"></i>
-                <p>Choisissez un restaurant </p>
+                <p>Dégustez au restaurant</p>
             </div>
+        </div>
         </section>
         <section class="section-restaurants">
-            <h2>Restaurants</h2>
-            <div>
+            <div class="section-restaurants__container">
+                <h2 class="section-restaurants__title">Restaurants</h2>
+            
                 <article class="cards">
                     <a href="#" class="cards__link">
                         <img class="cards__img"
@@ -141,7 +145,8 @@
                     </div>
                 </article>
             </div>
-        </section>
+            </section>
+
     </main>
     <footer class="footer">
         <h2 class="footer__title">ohmyfood</h2>
@@ -156,6 +161,7 @@
             <li class="footer__list--link"><a href="#">Contact</a></li>
         </ul>
     </footer>
+</div>
 </body>
 
 </html>

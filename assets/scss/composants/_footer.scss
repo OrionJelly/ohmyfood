@@ -7,7 +7,7 @@
 
         &__title {
             font-family: 'shrikhand';
-            padding-bottom : 22px;
+            
         }
 
         &__list {
@@ -16,7 +16,8 @@
             gap: 8px;
             list-style: none;
             font-weight: 500;
-            padding: 0;
+            margin-top: 15px;
+            padding-left: 0;
 
 
             &--link a{
@@ -29,4 +30,53 @@
                 padding-right: 5px;
             }
         }
+}
+
+/****** Media queries ***********/
+/* Medium devices (tablets, more/equal than 769px) */
+@media (min-width: 769px) {
+
+   .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    
+    
+
+    &__title{
+        margin-left: 20px;
+    }
+    &__list {
+        flex-direction: row;
+        margin-top: 0;
+        
+    & :nth-child(3) {
+
+        margin-left: 1rem;
+    }
+    }
+   }
+    
+}
+
+/* Large Devices (Desktop, more/equal than 1025px */
+@media (min-width:1025px) {
+
+    .footer {
+        padding-inline: 5%;
+        padding-bottom: 5px;
+        align-items: center;
+
+        &__title {
+            padding-left: 5%;
+        }
+        &__list {
+            
+            
+        & :nth-child(3) {
+    
+            margin-left: 3rem;
+        }
+        }
+        
+    }
 }
