@@ -1,0 +1,26 @@
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+    &__object {
+        height: 25vh;
+        animation: titlescale 3000ms infinite alternate-reverse;     
+        font-size: 40px;
+                                                         
+        
+    }
+}
+
+@keyframes titlescale {
+    0% {
+         top:20% ;
+        
+    }
+    
+    100% {
+        bottom: 70%;
+    }
+}

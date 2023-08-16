@@ -1,3 +1,5 @@
+@use '../utilities/_variables' as *;
+
 .cards {
     position: relative;
     display: flex;
@@ -5,7 +7,7 @@
     height: 251px;
     border-radius: 15px;
     border-radius: 15px;
-    background: $second-bg-color;
+    background: $secondbgcolor;
     overflow: hidden;
     padding-bottom: 15px;
    
@@ -47,7 +49,7 @@
     position: absolute;
     top: 12px;
     right: 12px;
-    background: $third-color;
+    background: $thirdcolor;
     color: rgba(0, 135, 102, 1);
     font-weight: 500;
     border-radius: 2px;
@@ -72,7 +74,7 @@ i.fa-solid.fa-heart {
 }
 
 input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
-    background: linear-gradient($secondary-color, $primary-color);
+    background: linear-gradient($secondarycolor, $primarycolor);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     visibility: inherit;
@@ -85,17 +87,16 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, more/equal than 769px) */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
     .cards {
-       min-width: 48%;
-       max-width: 490px;
+       min-width: 47%;
     }
 
 }
 
 /* Large Devices (Desktop, more/equal than 1025px */
-@media (min-width:1025px) {
+@media (min-width:1024px) {
 
     .cards {
         min-width: 48%;

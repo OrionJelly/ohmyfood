@@ -1,0 +1,23 @@
+@use '../utilities/variables' as *;
+
+.main-button {
+
+    background: linear-gradient($secondarycolor, $primarycolor);
+    border-radius: 50px;
+    color: $secondbgcolor;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-weight: 500;
+    transition: all 400ms ease-in-out;
+    position: relative;
+    z-index: 25;
+
+    &:hover {
+        background: linear-gradient($lightsecondarycolor, $lightprimarycolor);
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+        transform:  scale(1.05);
+
+    }
+}

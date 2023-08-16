@@ -1,46 +1,18 @@
-@charset "UTF-8";
+@charset "utf-8";
 
-/**  Colors **/
+@use 'utilities/variables' as *;
+@use 'modules/button';
+@use 'modules/cards';
+@use 'modules/footer';
+@use './pages/restaurant';
 
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$third-color: #99E2D0;
-
-$light-primary-color: lighten(#9356DC, 5%);
-$light-secondary-color: lighten(#FF79DA, 5%);
-
-$main-bg-color: rgba(246, 246, 246, 1);
-$second-bg-color: rgba(255, 255, 255, 1);
-
-/************ Fonts **************/
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&family=Shrikhand&display=swap');
-
-
-/********** Linked SCSS files **********/
-
-@import "composants/_button.scss";
-@import "composants/_cards.scss";
-@import "composants/_footer.scss";
-@import "composants/loader";
-
-
-
-
-
-
-
-
-
-
-/***************************************/
+@use 'utilities/fonts';
 
 
 
 *{
     margin: 0;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -60,14 +32,15 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 
         .nav__logo{
             width: 100%;
             display: flex;
             justify-content: center;
             height: 36px;
-            padding: 15px;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+            padding: 10px 0;
+            
 
         }
 
@@ -77,14 +50,13 @@ nav {
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin: auto;
             height: 50px;
             background-color: rgba(234, 234, 234, 1);
             font-size: 16px;
             
+            
                 .fa-location-dot {
-                    margin-right: 20px;
-                }
+                    padding-inline: 10px;               }
         }
 }
 
@@ -95,7 +67,7 @@ nav {
     text-align: center;
     align-items: center;
     gap: 20px;
-    background-color: $main-bg-color;
+    background-color: $mainbgcolor;
 
     h1 {
         font-size: 24px;
@@ -119,10 +91,9 @@ nav {
             justify-content: center;
             align-items: center;
             position: relative;
-            background-color: $main-bg-color;
+            background-color: $mainbgcolor;
             box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
             border-radius: 20px;
-            padding: 0 15px;
             
         
 
@@ -134,13 +105,13 @@ nav {
                     display: flex;
                     justify-content: center;
                     align-items: center;                    
-                    background: $primary-color;
+                    background: $primarycolor;
                     border-radius: 20px;
-                    color: $second-bg-color;
+                    color: $secondbgcolor;
                 }
 
                 i {
-                    padding-left: 20px;
+                    
                     color: rgba(126, 126, 126, 1);
                 }
 
@@ -150,13 +121,25 @@ nav {
         }
 
         .fa-store {
-            color: $primary-color;
+             color: $primarycolor;
         }
     }
 }
 
+/*** Adjust position icon section function ****/
+
+.adjust-position-1 {
+
+    padding-left: 12px;
+
+}
+
+.adjust-position-2 {
+    margin-left: -14px;
+}
+
 .section-restaurants {
-    background: $main-bg-color;
+    background: $mainbgcolor;
     padding: 2% 5%;
     display: flex;
     flex-direction: column;
@@ -197,7 +180,7 @@ nav {
 }
 
 /* Large Devices (Desktop, more/equal than 1025px */
-@media (min-width:1025px) {
+@media (min-width:1200px) {
 
     .section-function {
 

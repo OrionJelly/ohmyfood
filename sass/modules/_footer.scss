@@ -1,9 +1,12 @@
+@use '../utilities/_variables' as *;
+
+
 .footer {
     padding: 22px 25px;
     display: flex;
     flex-direction: column;
     background: rgba(53, 53, 53, 1);
-    color: $second-bg-color;
+    color: $secondbgcolor;
 
         &__title {
             font-family: 'shrikhand';
@@ -22,7 +25,7 @@
 
             &--link a{
                 text-decoration: none;
-                color: $second-bg-color;
+                color: $secondbgcolor;
             }
 
             &--link i {

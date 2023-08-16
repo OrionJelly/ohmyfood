@@ -1,8 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 /**  Colors **/
-/************ Fonts **************/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&family=Shrikhand&display=swap");
-/********** Linked SCSS files **********/
 .main-button {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
@@ -10,14 +7,16 @@
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   text-decoration: none;
-  padding: 15px;
+  padding: 15px 35px;
   font-weight: 500;
   transition: all 400ms ease-in-out;
+  position: relative;
+  z-index: 25;
 }
 .main-button:hover {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
-  transform: scale(1.005);
+  transform: scale(1.05);
 }
 
 .cards {
@@ -38,8 +37,7 @@
 .cards__img {
   width: 100%;
   height: 190px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .cards__tag {
   position: absolute;
@@ -85,8 +83,7 @@ i.fa-solid.fa-heart {
 
 input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
   background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   visibility: inherit;
   font-size: 23px;
@@ -94,14 +91,13 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, more/equal than 769px) */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .cards {
-    min-width: 48%;
-    max-width: 490px;
+    min-width: 47%;
   }
 }
 /* Large Devices (Desktop, more/equal than 1025px */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .cards {
     min-width: 48%;
     max-width: 490px;
@@ -167,29 +163,134 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
     margin-left: 3rem;
   }
 }
-.loader {
+.nav-restaurant {
+  flex-direction: row;
+  justify-content: center;
+}
+.nav-restaurant__return {
+  position: relative;
+  left: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.loader__object {
-  height: 25vh;
-  animation: titlescale 3000ms infinite alternate-reverse;
-  font-size: 40px;
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
 }
 
-@keyframes titlescale {
-  0% {
-    top: 20%;
+.image-restaurant {
+  max-height: 275px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-menu .title {
+  font-family: "Shrikhand", sans-serif;
+}
+.section-menu .menu-content {
+  position: relative;
+  background-color: rgb(246, 246, 246);
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+  padding: 5%;
+}
+.section-menu .menu-content__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+i.fa-regular {
+  font-size: 20px;
+}
+
+.dish {
+  margin: 20px 0;
+}
+.dish__title {
+  font-size: 16px;
+  font-weight: 300;
+}
+.dish__available {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.dish__available:hover .dish__add--effect {
+  margin-right: 0;
+}
+.dish__content {
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dish__content--title {
+  font-size: 18px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dish--price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  padding: 10px;
+  font-weight: 700;
+}
+.dish__add--effect {
+  width: 69px;
+  margin-right: -69px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: margin-right 800ms 100ms;
+}
+
+.dish__add {
+  display: flex;
+}
+
+.border {
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.dish__anima-0 {
+  animation: appear 1500ms ease-in-out backwards;
+}
+
+.dish__anima-1 {
+  animation: appear 1500ms ease-in-out 750ms backwards;
+}
+
+.dish__anima-2 {
+  animation: appear 1500ms ease-in-out 1000ms backwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
   }
-  100% {
-    bottom: 70%;
+  to {
+    opacity: 1;
   }
 }
-/***************************************/
 * {
   margin: 0;
-  font-family: "roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -208,27 +309,26 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 nav .nav__logo {
   width: 100%;
   display: flex;
   justify-content: center;
   height: 36px;
-  padding: 15px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
 }
 nav .nav__input {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: auto;
   height: 50px;
   background-color: rgb(234, 234, 234);
   font-size: 16px;
 }
 nav .nav__input .fa-location-dot {
-  margin-right: 20px;
+  padding-inline: 10px;
 }
 
 .section-header {
@@ -262,7 +362,6 @@ nav .nav__input .fa-location-dot {
   background-color: rgb(246, 246, 246);
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  padding: 0 15px;
 }
 .section-function__container--tips--dot {
   width: 24px;
@@ -277,7 +376,6 @@ nav .nav__input .fa-location-dot {
   color: rgb(255, 255, 255);
 }
 .section-function__container--tips i {
-  padding-left: 20px;
   color: rgb(126, 126, 126);
 }
 .section-function__container--tips p {
@@ -285,6 +383,15 @@ nav .nav__input .fa-location-dot {
 }
 .section-function__container .fa-store {
   color: #9356DC;
+}
+
+/*** Adjust position icon section function ****/
+.adjust-position-1 {
+  padding-left: 12px;
+}
+
+.adjust-position-2 {
+  margin-left: -14px;
 }
 
 .section-restaurants {
@@ -318,7 +425,7 @@ nav .nav__input .fa-location-dot {
   }
 }
 /* Large Devices (Desktop, more/equal than 1025px */
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .section-function {
     padding-inline: 10%;
   }

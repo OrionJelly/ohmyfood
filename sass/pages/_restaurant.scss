@@ -1,0 +1,159 @@
+@use '../utilities/_variables' as *;
+
+.nav-restaurant {
+    flex-direction: row;
+    justify-content: center;
+    
+    &__return {
+        position: relative;
+        left: 4%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+        font-size: 22px;
+    }
+}
+
+
+.image-restaurant {
+    max-height: 275px;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.section-menu {
+   
+    .title {
+        font-family: 'Shrikhand', sans-serif;
+    }
+    
+    .menu-content {
+        position: relative;
+        background-color: $mainbgcolor;
+        border-radius: 40px 40px 0 0;
+        margin-top: -40px;
+        padding: 5%;
+        
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    }
+}
+
+i.fa-regular {
+    font-size: 20px;
+}
+
+
+.dish {
+    margin: 20px 0;
+
+
+    &__title {
+        font-size: 16px;
+        font-weight: 300;
+        
+    }
+
+    &__available {
+        background-color: $secondbgcolor;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+        margin: 12px 0;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+       
+
+        &:hover .dish__add--effect {
+            margin-right: 0;
+        }
+
+    }
+
+    &__content {
+        padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+
+    }
+
+    &__content--title {
+        font-size: 18px;
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &--price {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        padding: 10px;
+        font-weight: 700;
+       
+    }
+
+    &__add--effect{
+        width: 69px;
+        margin-right: -69px;
+        border-radius: 0 15px 15px 0;
+        background-color: $thirdcolor;
+        color: $secondbgcolor;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: margin-right 800ms 100ms;
+        
+        
+    }
+
+    
+
+    
+}
+
+.dish__add {
+    display: flex;
+}
+.border {
+    width: 40px;
+    border-bottom: 3px solid $thirdcolor;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+
+}
+
+.dish__anima-0 {
+    animation: appear 1500ms ease-in-out  backwards;
+}
+.dish__anima-1 {
+    animation: appear 1500ms ease-in-out 750ms backwards;
+    
+}
+.dish__anima-2 {
+    animation: appear 1500ms ease-in-out 1000ms  backwards;
+}
+
+@keyframes appear {
+    from{
+     opacity: 0;
+        
+    }
+    
+    to {
+            opacity: 1;
+        }
+    }
