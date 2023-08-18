@@ -84,6 +84,7 @@ i.fa-solid.fa-heart {
 input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   visibility: inherit;
   font-size: 23px;
@@ -135,7 +136,7 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
 /* Medium devices (tablets, more/equal than 768px) */
 @media (min-width: 768px) {
   .footer {
-    height: 60px;
+    height: 114px;
     flex-direction: row-reverse;
     align-items: center;
   }
@@ -424,7 +425,6 @@ nav .nav__logo {
   padding: 2% 5%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px;
 }
 .section-restaurants__container {
   margin: 20px 0;
