@@ -86,7 +86,7 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
 }
 
 /****** Media queries ***********/
-/* Medium devices (tablets, more/equal than 769px) */
+/* Medium devices (tablets, more/equal than 768px) */
 @media (min-width: 768px) {
 
     .cards {
@@ -95,7 +95,7 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
 
 }
 
-/* Large Devices (Desktop, more/equal than 1025px */
+/* Large Devices (Desktop, more/equal than 1024px */
 @media (min-width:1024px) {
 
     .cards {

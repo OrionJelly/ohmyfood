@@ -25,9 +25,10 @@
 }
 
 .section-menu {
-   
+    
     .title {
         font-family: 'Shrikhand', sans-serif;
+        
     }
     
     .menu-content {
@@ -40,7 +41,8 @@
 
         &__header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 30px;
             
         }
     }
@@ -133,18 +135,19 @@ i.fa-regular {
 .button {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 
 }
 
 .dish__anima-0 {
-    animation: appear 1500ms ease-in-out  backwards;
+    animation: appear 2000ms 200ms ease-in-out  backwards;
 }
 .dish__anima-1 {
-    animation: appear 1500ms ease-in-out 750ms backwards;
+    animation: appear 2000ms ease-in-out 1000ms backwards;
     
 }
 .dish__anima-2 {
-    animation: appear 1500ms ease-in-out 1000ms  backwards;
+    animation: appear 2000ms ease-in-out 1500ms  backwards;
 }
 
 @keyframes appear {
@@ -157,3 +160,21 @@ i.fa-regular {
             opacity: 1;
         }
     }
+
+
+/****** Media queries ***********/
+/* Medium devices (tablets, more/equal than 768px) */
+@media (min-width: 768px){
+.section-menu {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .menu-content {
+        width: 50%;
+        padding-inline: 15%;
+        
+    }
+}
+}
