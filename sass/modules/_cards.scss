@@ -75,7 +75,7 @@ i.fa-solid.fa-heart {
 
 input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
     background: linear-gradient($secondarycolor, $primarycolor);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     visibility: inherit;
     font-size: 23px;

@@ -2,6 +2,7 @@
 
 
 .footer {
+    
     padding: 22px 25px;
     display: flex;
     flex-direction: column;
@@ -37,9 +38,10 @@
 
 /****** Media queries ***********/
 /* Medium devices (tablets, more/equal than 768px) */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
    .footer {
+    height: 60px;
     flex-direction: row-reverse;
     align-items: center;
     
@@ -62,12 +64,11 @@
 }
 
 /* Large Devices (Desktop, more/equal than 1024px */
-@media (min-width:1025px) {
+@media (min-width:1024px) {
 
     .footer {
         padding-inline: 5%;
-        padding-bottom: 5px;
-        align-items: center;
+        align-items: flex-end;
 
         &__title {
             padding-left: 5%;

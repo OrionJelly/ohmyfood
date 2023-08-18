@@ -16,14 +16,18 @@
 }
 
 body {
+    
+    min-height: 100%;
     display: flex;
     justify-content: center;
 }
 
 .body__container {
+    position: relative;
     width: 100%;
     max-width: 1440px;
 }
+
 
 /***************  HEADER **************/
 
@@ -146,15 +150,18 @@ nav {
     margin-left: -14px;
 }
 
+
 .section-restaurants {
     background: $mainbgcolor;
     padding: 2% 5%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
 
     
 
     &__container {
+        
         margin: 20px 0;
         display: flex;
         flex-direction: column;
