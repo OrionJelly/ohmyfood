@@ -136,7 +136,7 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
 /* Medium devices (tablets, more/equal than 768px) */
 @media (min-width: 768px) {
   .footer {
-    height: 114px;
+    height: 80px;
     flex-direction: row-reverse;
     align-items: center;
   }
@@ -336,6 +336,9 @@ nav .nav__logo {
   justify-content: center;
   height: 36px;
   padding: 10px 0;
+}
+nav .nav__logo--img {
+  max-width: 207px;
 }
 
 .nav-restaurant__return {

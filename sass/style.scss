@@ -25,6 +25,7 @@ body {
 .body__container {
     position: relative;
     width: 100%;
+    height: 100%;
     max-width: 1440px;
 }
 
@@ -45,6 +46,10 @@ nav {
             justify-content: center;
             height: 36px;
             padding: 10px 0;
+
+            &--img {
+                max-width: 207px;
+            }
     
             }
             
@@ -226,15 +231,19 @@ nav {
 
 
 .loader {
-    position: absolute;
-    z-index: 500;
-    inset: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;    
     width: 100%;
     height: 100vh;
     background-color: rgba(234, 234, 234, 1);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
     animation: disapear 1s 3000ms forwards ;
     
 
