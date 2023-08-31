@@ -5,7 +5,7 @@
 @use 'modules/cards';
 @use 'modules/footer';
 @use './pages/restaurant';
-
+@use 'modules/loader';
 @use 'utilities/fonts';
 
 
@@ -38,7 +38,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    
 
         .nav__logo{
             width: 100%;
@@ -46,6 +46,7 @@ nav {
             justify-content: center;
             height: 36px;
             padding: 10px 0;
+            box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);
 
             &--img {
                 max-width: 207px;
@@ -227,131 +228,3 @@ nav {
 }
 
 
-/***** LOADER *****/
-
-
-.loader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;    
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(234, 234, 234, 1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    animation: disapear 1s 3000ms forwards ;
-    
-
-    &__logo {
-       display: flex;
-       justify-content: center;
-       margin: auto;
-       width: 100%;
-       height: 40px;
-    }
-
-    &__container {
-        display: flex;
-        gap: 20px;
-    }
-
-    &__square {
-
-        width: 20px;
-        height: 20px;
-    }
-
-    &__square-1 {
-        background-color: $primarycolor;
-        animation: loader 2s both infinite;
-    }
-
-    &__square-2 {
-        background-color: $secondarycolor;
-        animation: loader-2 2s infinite;
-    }
-
-    &__square-3 {
-        background-color: $thirdcolor;
-        animation: loader-3 2s infinite;
-    }
-}
-
-@keyframes loader {
-    0% {
-        transform: translate(0);
-    }
-    25% {
-        transform: translateX(80px);
-        
-    }
-
-    50% {
-        transform: translateX(40px);
-        
-    }
-    
-    75% {
-        transform: translateX(0px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes loader-2 {
-    0% {
-        transform: translate(0);
-    }
-    25% {
-        
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(-40px);
-    }
-
-    75% {
-        transform: translateX(40px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes loader-3 {
-    0% {
-        transform: translate(0);
-    }
-    25% {
-        transform: translateX(-80px)
-    }
-
-    50% {
-        transform: translateX(0);
-        
-    }
-
-    75% {
-        transform: translateX(-40px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes disapear {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-9999px);
-    }
-}
