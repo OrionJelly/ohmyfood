@@ -101,7 +101,7 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
   }
 }
 .footer {
-  height: 100%;
+  height: 186px;
   position: relative;
   bottom: 0;
   padding: 22px 25px;
@@ -135,6 +135,7 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
 /* Medium devices (tablets, more/equal than 768px) */
 @media (min-width: 768px) {
   .footer {
+    height: 114px;
     flex-direction: row-reverse;
     align-items: center;
   }
@@ -411,7 +412,6 @@ i.fa-regular {
 }
 
 body {
-  min-height: 100%;
   display: flex;
   justify-content: center;
 }
@@ -419,7 +419,6 @@ body {
 .body__container {
   position: relative;
   width: 100%;
-  height: 100%;
   max-width: 1440px;
 }
 
@@ -493,6 +492,8 @@ nav .nav__logo--img {
   background-color: rgb(246, 246, 246);
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  padding-left: 20px;
+  white-space: nowrap;
 }
 .section-function__container--tips--dot {
   width: 24px;

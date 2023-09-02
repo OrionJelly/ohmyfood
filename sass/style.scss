@@ -17,7 +17,6 @@
 
 body {
     
-    min-height: 100%;
     display: flex;
     justify-content: center;
 }
@@ -25,7 +24,6 @@ body {
 .body__container {
     position: relative;
     width: 100%;
-    height: 100%;
     max-width: 1440px;
 }
 
@@ -112,6 +110,8 @@ nav {
             background-color: $mainbgcolor;
             box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
             border-radius: 20px;
+            padding-left: 20px;
+            white-space: nowrap;
             
         
 
