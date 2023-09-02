@@ -25,6 +25,13 @@
 
     &__tag {
         position: absolute;
+        top: 12px;
+        right: 12px;
+        background: $thirdcolor;
+        color: rgba(0, 135, 102, 1);
+        font-weight: 500;
+        border-radius: 2px;
+        padding: 10px;
     }
 
     &__content {
@@ -45,27 +52,20 @@
 
 }
 
-.cards__tag {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: $thirdcolor;
-    color: rgba(0, 135, 102, 1);
-    font-weight: 500;
-    border-radius: 2px;
-    padding: 10px;
-}
+//*Effects on click HEART
 
 
 #checkbox, #checkbox2, #checkbox3, #checkbox4 {
     display: none;
 }
 
-i.fa-regular.fa-heart:hover {
+i.fa-regular.fa-heart {
     cursor: pointer;
+    
+    
 }
 
-i.fa-solid.fa-heart {
+i.fa-solid.fa-heart{
     visibility: hidden;
     font-size: 0;
     transition: all 0.5s ease-in-out;
@@ -80,6 +80,7 @@ input[type=checkbox]:checked ~ i.fa-solid.fa-heart {
     -webkit-text-fill-color: transparent;
     visibility: inherit;
     font-size: 23px;
+    
 
   
 
